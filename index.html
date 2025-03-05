@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sycamore bank statement extraction</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="upload-wrapper">
+            <div class="logo">
+                <svg width="50" height="50" viewBox="0 0 100 100">
+                    <rect width="100" height="100" rx="20" fill="black"/>
+                    <text x="50%" y="50%" text-anchor="middle" dy=".3em" 
+                          font-size="40" font-weight="bold" 
+                          fill="white">BSC</text>
+                </svg>
+            </div>
+            <h2>Upload Bank Statement</h2>
+            <form id="uploadForm">
+                <div class="file-input-wrapper">
+                    <input 
+                        type="file" 
+                        id="bankStatement" 
+                        class="file-input"
+                    >
+                    <label for="bankStatement" class="file-input-label">
+                        <span class="upload-icon">↑</span>
+                        Choose File
+                    </label>
+                    <span id="fileName" class="file-name"></span>
+                </div>
+                
+                <button 
+                    type="submit" 
+                    id="submitBtn" 
+                    class="submit-btn"
+                >
+                    Submit
+                </button>
+            </form>
+            
+            <div class="json-output-wrapper">
+                <label for="jsonOutput">JSON Output</label>
+                <textarea 
+                    id="jsonOutput" 
+                    readonly 
+                    placeholder="JSON response will appear here..."
+                ></textarea>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
