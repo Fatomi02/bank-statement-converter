@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Create FormData
     const formData = new FormData();
-    formData.append("file", fileInput.files[0]);
+    formData.append("pdf", fileInput.files[0]);
 
     try {
       // Simulated API call (replace with actual endpoint)
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Simulated fetch function (replace with actual fetch)
   async function simulateFetch(
     formData,
-    apiUrl = "https://bank-statement-json.onrender.com/api/pdf/upload"
+    apiUrl = "https://bank-statement-json-done.onrender.com/api/pdf/upload"
   ) {
     try {
       // Validate API URL
@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return {
         status: "success",
         data: jsonResponse,
-        fileName: formData.get("file").name,
+        fileName: formData.get("pdf").name,
         uploadTimestamp: new Date().toISOString(),
       };
     } catch (error) {
