@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Simulated fetch function (replace with actual fetch)
   async function simulateFetch(
     formData,
-    apiUrl = "https://bank-statement-analyzer-5.onrender.com/upload"
+    apiUrl = "https://bank-statement-json.onrender.com/upload"
   ) {
     try {
       // Validate API URL
